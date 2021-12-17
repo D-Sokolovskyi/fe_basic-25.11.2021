@@ -1,0 +1,148 @@
+/* Универсальный селектор - выберет каждый элемент */
+* {
+  box-sizing: border-box;
+}
+
+/* Селектор по тегу (по типу элемента) */
+body {
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
+  color: tomato;
+}
+
+/* Селектор по классу */
+.text {
+  font-family: sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.danger {
+  color: red;
+  text-decoration: underline;
+}
+
+.info {
+  color: grey;
+}
+
+/* Селектор по id */
+#main-title {
+  font-size: 120px;
+  background-color: darkblue;
+}
+
+/* Селектор по атрибуту */
+[href] {
+  text-decoration: none;
+  color: lightgreen;
+}
+
+[href^='tel:'] {
+  text-decoration: overline;
+}
+
+[href$='.ua'] {
+  text-decoration: line-through;
+}
+
+[href*='hillel'] {
+  color: orange;
+}
+
+/* Составной (сложный) селектор */
+span.text {
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: purple;
+  text-transform: uppercase;
+}
+
+/* Селектор потомков */
+.about .section-title {
+  letter-spacing: 8px;
+}
+
+/* Селектор прямых (непосредственных) дочерних элементов */
+.about > .section-title {
+  word-spacing: 40px;
+}
+
+/* Соседный селектор */
+/* .second + .nav-item {
+  background-color: deepskyblue;
+  font-size: 40px;
+} */
+
+/* Родственный селектор (работает как +, но выбирает всех последующих соседей) */
+/* .second ~ .nav-item {
+  background-color: deepskyblue;
+  font-size: 40px;
+} */
+
+.header {
+  padding: 40px;
+  background-color: lightblue;
+}
+
+header.header {
+  background-color: tomato;
+}
+
+header.header.header.header {
+  background-color: plum;
+}
+
+#header {
+  background-color: orange;
+}
+
+.nav-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+/* .nav-item:first-child {
+  margin-right: 0;
+} */
+.nav-item:first-of-type {
+  margin-left: 0;
+}
+
+.nav-link {
+  font-size: 24px;
+}
+
+.nav-link:hover {
+  color: red;
+}
+
+.nav-link:active {
+  color: blue;
+  text-decoration: underline;
+}
+
+div {
+  width: 300px;
+  height: 300px;
+  border: 10px solid #000;
+}
+
+.red {
+  background-color: red !important;
+}
+
+.blue {
+  background-color: blue;
+}
