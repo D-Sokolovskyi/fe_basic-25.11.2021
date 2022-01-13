@@ -1,0 +1,8 @@
+/* Tablets */
+.services-cards {
+  flex-wrap: wrap;
+}
+.services-card {
+  flex-basis: calc(50% - 16px);
+  background-color: lightgreen;
+}

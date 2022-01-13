@@ -1,0 +1,71 @@
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header */
+
+.header {
+  background-color: lightblue;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-link {
+  display: block;
+  padding: 24px 0;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* hero */
+
+.hero {
+  padding: 80px 0;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+/* about */
+
+.section-title {
+  font-size: clamp(32px, calc(42 / 1180 * 100vw), 42px);
+}
+
+.about-text {
+  margin-top: clamp(20px, calc(68 / 1180 * 100vw), 68px);
+}
+
+/* services */
+
+.services {
+  padding: 80px 0;
+}
+
+.services-cards {
+  display: flex;
+  gap: 16px;
+}
+
+.services-card {
+  flex-basis: 25%;
+  padding: 24px;
+  border: 4px solid lightblue;
+  border-radius: 8px;
+}

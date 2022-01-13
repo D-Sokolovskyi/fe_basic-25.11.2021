@@ -1,0 +1,32 @@
+@import url('desktop.css');
+@import url('tablet.css') screen and (max-width: 768px);
+@import url('fonts.css') screen and (min-width: 769px);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .services-cards {
+    flex-direction: column;
+  }
+
+  .services-card {
+    background-color: lightgrey;
+  }
+
+  .hero__image {
+    display: none;
+  }
+}
