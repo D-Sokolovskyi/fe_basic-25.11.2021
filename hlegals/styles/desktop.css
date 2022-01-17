@@ -1,0 +1,239 @@
+/* services */
+
+.services {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 48px 0;
+  background-image: linear-gradient(
+    228.57deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+  );
+  border-radius: 0px 0px 12px 12px;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  left: 20px;
+  height: 10px;
+  background-color: #cacadb;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.services::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 40px;
+  left: 40px;
+  height: 10px;
+  background-color: #e7e7f2;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo-text {
+  font-size: 38px;
+  line-height: 45px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo-text:hover {
+  color: #f0145a;
+}
+
+.logo-container .nav-open {
+  display: none;
+  border: none;
+  padding: 8px;
+  margin-left: auto;
+  margin-right: -8px;
+  align-self: center;
+  background-color: transparent;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+}
+
+.langs-list {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.lang-btn {
+  display: block;
+  padding: 5px 6px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.address,
+.phone-number,
+.social-link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #b3b3ba;
+  text-decoration: none;
+}
+
+.phone-number {
+  font-weight: bold;
+}
+
+.address::after,
+.phone-number::after,
+.social-link::after {
+  content: '';
+  order: -1;
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #e6e6f0;
+}
+
+.address:hover,
+.phone-number:hover,
+.social-link:hover {
+  color: #c1446b;
+}
+
+.lang-btn:hover {
+  box-shadow: inset 0 0 0 2px #f0145a;
+}
+
+.lang-btn-active {
+  background-color: #f0145a;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0 15px;
+  margin-top: 16px;
+}
+
+#nav-trigger {
+  display: none;
+}
+
+.header-nav .nav-close {
+  display: none;
+  border: none;
+  padding: 8px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: transparent;
+  color: #ec6f5d;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.header-nav .nav-link {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-nav .nav-link:hover,
+.header-nav .nav-link-active {
+  border-color: #fff;
+}
+
+.services .slogan {
+  width: fit-content;
+  margin: 0;
+  margin-top: clamp(20px, calc(72 / 1360 * 100vw), 72px);
+  font-size: clamp(32px, calc(42 / 1140 * 100vw), 42px);
+  line-height: 50px;
+  font-weight: bold;
+  background-image: linear-gradient(45deg, #f0145a, #ef8080);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.services-cards {
+  margin: 68px 0 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 58px 40px;
+}
+
+.services-card {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 335px;
+}
+
+.services-card .card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.services-card .card-logo {
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 24px;
+}
+
+/* Change paddings for last card icon */
+/* .services-card .card-logo:last-child {
+  padding: 22px;
+} */
+
+.services-card .card-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+  color: #24a3ff;
+  font-weight: 500;
+}
+
+.services-card .card-text {
+  margin: 15px 0 0;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+}
