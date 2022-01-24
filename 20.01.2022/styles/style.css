@@ -64,3 +64,10 @@ body {
 .container:hover .spinner {
   transform: rotate(10turn);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner,
+  .relative {
+    transition: none;
+  }
+}

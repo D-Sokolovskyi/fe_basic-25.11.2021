@@ -1,0 +1,1 @@
+const josh = new Josh();

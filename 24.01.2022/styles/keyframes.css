@@ -1,0 +1,28 @@
+@keyframes rotation-3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    left: 0%;
+    top: 0;
+    transform: rotate(0deg);
+    background-color: red;
+  }
+  50% {
+    top: 100px;
+    transform: rotate(360deg);
+    background-color: green;
+  }
+  100% {
+    left: calc(100% - 100px);
+    top: 0;
+    transform: rotate(0deg);
+    background-color: blue;
+  }
+}

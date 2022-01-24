@@ -1,0 +1,111 @@
+@import url('keyframes.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(200, 200, 200);
+  background-image: radial-gradient(circle, blue, black);
+
+  perspective: 800px;
+  perspective-origin: center 30%;
+}
+
+.cube {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  /* transform: rotate3d(2, -1, -1, 45deg); */
+  /* transform: translate3d(0px, -100px, 200px); */
+  /* transform: scale3d(1, 1, 1); */
+  animation: rotation-3d 2s linear infinite alternate;
+
+  transform-style: preserve-3d;
+}
+
+.cube:hover {
+  animation-play-state: paused;
+}
+
+.side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 36px;
+
+  /* backface-visibility: hidden; */
+}
+
+.left {
+  transform: translateX(-50%) rotateY(-90deg);
+}
+
+.right {
+  transform: translateX(50%) rotateY(90deg);
+}
+
+.top {
+  transform: translateY(-50%) rotateX(90deg);
+}
+
+.bottom {
+  transform: translateY(50%) rotateX(-90deg);
+}
+
+.front {
+  transform: translateZ(150px);
+}
+
+.back {
+  transform: translateZ(-150px) rotateY(180deg);
+}
+
+/* Animated box */
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: lightgreen;
+
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  /* animation-delay: 3s; */
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+/* Animate CSS library */
+.box2 {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  font-size: 24px;
+  background-color: tomato;
+  color: #fff;
+}
