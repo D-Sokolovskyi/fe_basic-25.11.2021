@@ -1,0 +1,28 @@
+$primary-color: darkgreen;
+$base-fz: 18px;
+$base-radius: 12px;
+$info-color: #aaa;
+
+$fz-s: $base-fz - 2px;
+$fz-l: $base-fz + 2px;
+$fz-double: $base-fz * 2;
+$fz-half: $base-fz / 2;
+
+%base-font-style {
+  font-size: 18px;
+  line-height: 24px;
+  color: tomato;
+}
+
+%base-button {
+  display: inline-block;
+  background-color: $primary-color;
+  border-radius: $base-radius;
+  color: #fff;
+}
+
+%ellipsis {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}

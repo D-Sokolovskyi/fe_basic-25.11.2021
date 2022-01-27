@@ -1,0 +1,9 @@
+@mixin button($bgc: gray, $c: #fff) {
+  padding: 16px;
+  border: none;
+  font-size: 32px;
+  border-radius: 100vw;
+  background-color: $bgc;
+  color: $c;
+  @content;
+}

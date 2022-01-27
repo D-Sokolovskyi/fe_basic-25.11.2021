@@ -1,0 +1,9 @@
+@import 'variables';
+@import 'mixins';
+@import 'global';
+
+.services {
+  color: red;
+  background-color: $primary-color;
+  font-size: $fz-s;
+}
