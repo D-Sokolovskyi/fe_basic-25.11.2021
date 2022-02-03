@@ -1,3 +1,11 @@
+.section-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 /* services */
 
 .services {
@@ -128,7 +136,7 @@
 .address:hover,
 .phone-number:hover,
 .social-link:hover {
-  color: #c1446b;
+  color: var(--color-hover);
 }
 
 .lang-btn:hover {
@@ -236,4 +244,153 @@
   font-size: 18px;
   line-height: 26px;
   color: #ffffff;
+}
+
+/* Cases */
+
+.cases {
+  padding: 40px 0 30px;
+}
+
+.cases-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--base-gap, 2px);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cases-title {
+  margin-bottom: var(--base-gap);
+  color: #f0145a;
+}
+
+.cases-item-wrapper {
+  flex-grow: 1;
+}
+
+.cases-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f5f5fa;
+}
+
+.cases-item-wrapper,
+.cases-item--wannabiz,
+.cases-item--tapgerine {
+  flex-basis: calc(100% / 3 - var(--base-gap));
+}
+
+.cases-item--3dlook {
+  flex-basis: calc(320px - var(--base-gap));
+}
+
+.cases-item--adtelligent {
+  flex-basis: calc(453px - var(--base-gap));
+}
+
+.cases-item--clikky {
+  flex-basis: calc(547px - var(--base-gap));
+}
+
+.cases-item-title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.cases-item-link {
+  color: #686887;
+  text-decoration: none;
+}
+.cases-item-link:hover {
+  color: var(--color-hover);
+}
+
+.cases-item-company {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #b3b3ba;
+}
+
+/* Clients */
+.clients-title {
+  text-align: center;
+  color: #323264;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.clients-item {
+  height: 120px;
+  padding: 22px;
+  flex-grow: 1;
+  flex-basis: 25%;
+  background-color: lightgrey;
+}
+
+.client-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.clients-item--hillel {
+  background-color: #1c4280;
+}
+
+.clients-item--wannabiz {
+  background-color: #143646;
+}
+
+.clients-item--tapgerine {
+  background-color: #f48b30;
+}
+
+.clients-item--3dlook {
+  background-color: #9e4dc3;
+}
+
+.clients-item--orangear {
+  background-color: #fd9339;
+}
+
+.clients-item--adtelligent {
+  background-color: #e2e2e4;
+}
+
+.clients-item--clickky {
+  background-color: #c71c36;
+}
+
+.clients-item--ecoleasing {
+  background-color: #dcf3f9;
+}
+
+.clients-item--ingratek {
+  background-color: #eaeaea;
+}
+
+.clients-item--citypark {
+  background-color: #282240;
+}
+
+.clients-item--artprint {
+  background-color: #1d4568;
+}
+
+.clients-item--ultimatecard {
+  background-color: #000;
 }
