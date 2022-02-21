@@ -150,7 +150,7 @@ body {
     justify-content: center;
     padding-top: 0;
     padding-left: 60px;
-    border-top: 0;
+    border-top: none;
     border-left: 4px solid rgba(255, 255, 255, 0.3);
   }
 }
