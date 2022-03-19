@@ -20,6 +20,29 @@ body {
   padding: 0 30px;
 }
 
+.section__title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24a3ff;
+}
+
+.text-accent {
+  width: fit-content;
+  color: transparent;
+  background-image: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: clamp(30px, calc(38 / 1600 * 100vw), 38px);
+  font-weight: bold;
+}
+
+/* Page top block */
+
 .page-top-content {
   margin-bottom: 20px;
   position: relative;
@@ -215,21 +238,14 @@ body {
   padding-left: 0;
   padding-bottom: clamp(30px, calc(60 / 1600 * 100vw), 60px);
   list-style: none;
+  font-size: clamp(30px, calc(38 / 1600 * 100vw), 38px);
+  color: #b3b3ba;
 }
 
 .experience__item {
   font-weight: bold;
-  font-size: clamp(30px, calc(38 / 1600 * 100vw), 38px);
   line-height: 37px;
-  color: #b3b3ba;
   white-space: nowrap;
-}
-
-.experience__item--active {
-  color: transparent;
-  background-image: linear-gradient(90.13deg, #ef8080 0.84%, #f0145a 99.96%);
-  -webkit-background-clip: text;
-  background-clip: text;
 }
 
 .experience__descr {
@@ -248,6 +264,154 @@ body {
   margin: 30px 0 0;
   font-size: 19px;
   line-height: 30px;
+}
+
+/* SERVICES */
+.services__slogan {
+  margin: 10px 0 0;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0;
+  margin-top: clamp(30px, calc(60 / 1600 * 100vw), 60px);
+  padding-left: 0;
+  list-style: none;
+}
+
+.service__item {
+  --item-quantity: 1;
+  flex-grow: 1;
+  flex-basis: calc(100% / var(--item-quantity) - 60px);
+}
+
+.service__icon {
+  width: 92px;
+  height: 92px;
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 24px;
+}
+
+.service__title {
+  margin: 30px 0 0;
+  font-size: 22px;
+  line-height: 27px;
+  color: #24a3ff;
+}
+
+.service__descr {
+  margin: 15px 0 0;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+}
+
+/* TEAM */
+.team {
+  padding: 30px 0 30px;
+}
+
+.team-card__trigger {
+  display: none;
+}
+
+.cards-wrapper {
+  overflow-x: hidden;
+}
+
+.team-cards {
+  display: flex;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  transition: transform 0.5s ease-out;
+}
+
+#team-1:checked ~ .cards-wrapper .team-cards {
+  transform: translateX(0%);
+}
+
+#team-2:checked ~ .cards-wrapper .team-cards {
+  transform: translateX(-100%);
+}
+
+#team-3:checked ~ .cards-wrapper .team-cards {
+  transform: translateX(-200%);
+}
+
+.team__card {
+  display: flex;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.team-card__image {
+  flex-basis: 500px;
+  position: relative;
+}
+
+.team-card__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team-card__text {
+  padding: 30px;
+  background-color: #f5f5fa;
+}
+
+.team-card__slogan {
+  margin: 5px 0 0;
+}
+
+.team-card__person {
+  margin: 30px 0 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #b3b3ba;
+}
+
+.team-card__rank {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #b3b3ba;
+}
+
+.card-switchers {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.card__switcher {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(36, 163, 255, 0.2);
+  cursor: pointer;
+}
+
+#team-1:checked ~ .card-switchers li:nth-child(1) .card__switcher,
+#team-2:checked ~ .card-switchers li:nth-child(2) .card__switcher,
+#team-3:checked ~ .card-switchers li:nth-child(3) .card__switcher,
+.card__switcher:hover {
+  background-color: rgba(36, 163, 255, 1);
 }
 
 /* Tablet SD */
@@ -354,6 +518,24 @@ body {
   .experience {
     padding: 60px 0;
   }
+
+  .experience__list {
+    align-items: flex-end;
+  }
+
+  .service-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  .service__item {
+    --item-quantity: 2;
+  }
+
+  .team {
+    padding-top: 60px;
+  }
 }
 
 /* Tablet HD */
@@ -393,6 +575,19 @@ body {
     padding-left: 60px;
     border-top: none;
     border-left: 4px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .service__item {
+    --item-quantity: 3;
+  }
+
+  .team__card {
+    flex-direction: row;
+  }
+
+  .team-card__image {
+    flex-shrink: 0;
+    flex-basis: 400px;
   }
 }
 
